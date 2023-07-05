@@ -129,7 +129,7 @@ function Listing() {
           </MapContainer>
         </div>
 
-        {auth.currentUser?.uid === listing.useRef && (
+        {auth.currentUser?.uid !== listing.useRef && (
           <Link
             to={`/contact/${listing.useRef}?listingName=${listing.name}`}
             className='primaryButton'
